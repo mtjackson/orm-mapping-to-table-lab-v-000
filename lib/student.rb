@@ -28,6 +28,7 @@ class Student
 
   def save
     sql = <<-SQL
+      INSERT INTO students (name, grade) VALUES (?, ?)
   end
 
   def self.create
