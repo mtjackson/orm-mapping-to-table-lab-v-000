@@ -39,7 +39,7 @@ class Student
   def self.create(name:, grade:)
     new_student = Student.new(name, grade)
     new_student.save
-    student
+    new_student
   end
 
   # Remember, you can access your database connection anywhere in this class
