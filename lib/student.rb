@@ -32,6 +32,8 @@ class Student
     SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
+
+    new_id = <<-SQL
   end
 
   def self.create
