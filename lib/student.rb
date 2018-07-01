@@ -37,7 +37,7 @@ class Student
   #    SELECT id FROM students WHERE id = (SELECT MAX(id) FROM students)
   #  SQL
 
-    @id = DB[:conn].execute(new_id)
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")
   end
 
   def self.create
