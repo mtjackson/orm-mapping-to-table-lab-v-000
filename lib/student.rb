@@ -39,7 +39,6 @@ class Student
 
     DB[:conn].execute(new_id)
 
-
     self.id = new_id
   end
 
