@@ -36,6 +36,8 @@ class Student
     new_id = <<-SQL
       SELECT id FROM students WHERE id = (SELECT MAX(id))
     SQL
+
+    self.id = new_id
   end
 
   def self.create
