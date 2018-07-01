@@ -33,9 +33,9 @@ class Student
 
     DB[:conn].execute(sql, self.name, self.grade)
 
-    new_id = <<-SQL
-      SELECT id FROM students WHERE id = (SELECT MAX(id) FROM students)
-    SQL
+  #  new_id = <<-SQL
+  #    SELECT id FROM students WHERE id = (SELECT MAX(id) FROM students)
+  #  SQL
 
     @id = DB[:conn].execute(new_id)
   end
