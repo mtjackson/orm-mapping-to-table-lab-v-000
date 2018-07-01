@@ -37,6 +37,9 @@ class Student
       SELECT id FROM students WHERE id = (SELECT MAX(id))
     SQL
 
+    DB[:conn].execute(sql, self.name, self.grade)
+
+
     self.id = new_id
   end
 
